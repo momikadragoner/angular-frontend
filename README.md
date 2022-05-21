@@ -1,5 +1,20 @@
 # Frontend
 
+### Commands
+npm i bootstrap 
+
+ng add @angular/material  
+
+[NgMaterial](https://material.angular.io/components/categories)
+
+npx ng g component COMPONENET
+
+npx ng g class models/OBJECT
+
+npx ng g service services/OBJECT
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
 ## Development server
