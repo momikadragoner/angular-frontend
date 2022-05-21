@@ -1,0 +1,39 @@
+<div class="container">
+  <h1 class="text-center m-3">Ajánlataink</h1>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" class="shadow">
+
+    <ng-container matColumnDef="kategoriaNev">
+      <th mat-header-cell *matHeaderCellDef> Kategória </th>
+      <td mat-cell *matCellDef="let element" class="text-center"> {{element.kategoriaNev}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="leiras">
+      <th mat-header-cell *matHeaderCellDef> Leírás </th>
+      <td mat-cell *matCellDef="let element"> {{element.leiras}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="hirdetesDatuma">
+      <th mat-header-cell *matHeaderCellDef> Hirdetés Dátuma </th>
+      <td mat-cell *matCellDef="let element"> {{element.hirdetesDatuma}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tehermentes">
+      <th mat-header-cell *matHeaderCellDef> Tehermentes </th>
+      <td mat-cell *matCellDef="let element" class="text-center">
+        <span *ngIf="element.tehermentes" class="text-success fw-bold">Igen</span>
+        <span *ngIf="!element.tehermentes" class="text-danger fw-bold">Nem</span>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="kepUrl">
+      <th mat-header-cell *matHeaderCellDef> Fénykép </th>
+      <td mat-cell *matCellDef="let element" class="text-center">
+        <img src="{{element.kepUrl}}" alt="" srcset="" class="my-2" height="100">
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
